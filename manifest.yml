@@ -1,0 +1,16 @@
+---
+applications:
+- name: mc
+  memory: 256M
+  buildpack: binary_buildpack
+  host: mc
+  no-route: true
+  health-check-type: process
+  services:
+    - miniocreds
+  env:
+    CredentialsSIName: miniocreds
+    Minio1Host: https://xxxxxbb45-088fbdaeca10.system.acme.com
+    Minio1Bucket: bucket1
+    Minio2Host: https://xxxxxxxxxxxxxx74965006.system.acme.com/
+    Minio2Bucket: bucket1copy
